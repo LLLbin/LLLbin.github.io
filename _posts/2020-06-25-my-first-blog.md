@@ -1,6 +1,6 @@
 ---
 layout:     post                    
-title:      My First Post           
+title:      My First Blog           
 subtitle:   Hello World, Hello Blog 
 date:       2020-06-25              
 author:     LB                     
