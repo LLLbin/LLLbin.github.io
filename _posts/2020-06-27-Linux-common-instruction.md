@@ -1,16 +1,15 @@
 ---
 layout:     post                    
 title:      Linux - 常用指令           
-subtitle:   那些Linux上常用的指令笔记
+subtitle:   那些Linux上常用的指令笔记🍖
 date:       2020-06-27              
 author:     Lebin                     
 header-img: img/post-bg-Vimrc.jpg
 catalog: true                       
 tags:                               
     - Linux
+    - note
 ---
-
-# 那些常用的Linux指令🍖
 
 ## 目录操作
 ```
