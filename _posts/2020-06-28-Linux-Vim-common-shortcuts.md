@@ -2,7 +2,7 @@
 layout:     post                    
 title:      Linux - Vim常用快捷键           
 subtitle:   那些Vim上常用的快捷键🍗
-date:       2020-06-27              
+date:       2020-06-28              
 author:     Lebin                     
 header-img: img/post-bg-Vimrc.jpg
 catalog: true                       
