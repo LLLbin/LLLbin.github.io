@@ -330,7 +330,8 @@ mount:挂在命令
 ```
 shutdown:这个关机命令更安全一些，不推荐使用其他关机命令。
 　　-h：关机
-        shutdown -h now shutdown -h 20:30
+        shutdown -h now 
+        shutdown -h 20:30
 　　-r: 重启 
         shutdown -r now 
 　　-c: 取消上次的关机命令
