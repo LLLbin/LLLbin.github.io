@@ -68,7 +68,7 @@ less:查看文件内容
 
 head -n 文件名 :查看文件前n行。缺省-n显示前10行
 tail -n 文件名 ：查看文件的末尾几行
-　　-f :动态显示文件末尾内容
+　　 -f :动态显示文件末尾内容
 
 ln:链接命令
 　　-s创建软连接
@@ -103,10 +103,12 @@ chmod:修改文件或目录的权限，只有root和所有者可以更改
 　　　　x 　  执行权限    可以执行文件 　　　　 可以进入目录
 
 chown:更改文件所有者，只有root可以更改
-　　chown root a.txt//把a.txt更改为root所有
+　　   
+    chown root a.txt//把a.txt更改为root所有
 
 chgrp:更改所属组
-　　chgrp lambrother fengjie //把fengjie的所属组更改为lambrother
+　　
+    chgrp lambrother fengjie //把fengjie的所属组更改为lambrother
 
 umask -S:查看创建文件的缺省权限，即默认权限
 umask 023:修改文件的缺省权限为777-023=754。即rwxr-xr--
@@ -194,13 +196,39 @@ help 命令：查看shell内置命令的帮助信息。 shell内置命令是没�
 ```
 useradd: 添加用户
 　　useradd 用户名
+    -s: 指定shell
+    -g: 指定组
+    -d：指定家目录
+    -m：家目录不存在时自动创建
 
+    sudo useradd -s /bin/bash -g Lebin -d /home/Lebin -m Lebin
+
+groupadd: 添加组
+    groupadd 组名
+
+    sudo groupadd Liangzai
+    
 passwd: 修改用户密码
 　　passwd 用户名 不加用户名直接更改自己的密码
 
-who:查看当前的账户 显示的格式为： 登录用户名 登录终端（tty:本地登录 pts:远程终端） 登录时间 ip地址
+    sudo passwd binbin
 
-　　w:查看更详细的用户登录信息。
+su ：切换用户
+    
+    su Lebin 切换到Lebin
+    su-Lebin 切换到Lebin，带有环境变量
+
+root 用户
+
+    sudo su
+
+who:查看当前的账户 显示的格式为： 登录用户名 登录终端（tty:本地登录 pts:远程终端） 登录时间 ip地址
+　　-w:查看更详细的用户登录信息。
+
+del ：删除用户
+
+    sudo user del Lebin         删除用户
+    sudo user del -r Lebin      删除用户和家目录
 ```
 
 ## 压缩解压缩命令
@@ -333,7 +361,7 @@ shutdown:这个关机命令更安全一些，不推荐使用其他关机命令�
 logout:退出当前用户，返回到登录界面
 ```
 
-## 其他小技巧
+## 一些小命令
 ```
 \命令名字: 使用原始的命令
 　　比如：
@@ -371,6 +399,10 @@ logout:退出当前用户，返回到登录界面
 
 ## 其他命令
 ```
+date ：返回当前系统时间
+
+echo ：输出 变量或字符串
+
 du -sh 文件名: 查看当前文件夹大小
 
 ps 静态查看系统进程，系统默认安装
