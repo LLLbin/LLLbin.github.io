@@ -108,6 +108,7 @@ o       在下面新建一行插入；
 O       在上面新建一行插入；
 s       删除当前字母，进入插入模式
 S       删除当前行，进入插入模式
+
 :r filename       在当前位置插入另一个文件的内容。
 :[n]r filename    在第n行插入另一个文件的内容。
 :r !date          在光标处插入当前日期与时间。
@@ -189,9 +190,9 @@ N        向前查找下一个。
 :%s/^/xxx/g            在每一行的行首插入xxx，^表示行首。
 :%s/$/xxx/g            在每一行的行尾插入xxx，$表示行尾。
 
-i 表示大小写不敏感，%s/foo/bar/i
-I 表示大小写敏感    %s/foo/bar/I
-c 表示需要确认      %s/foo/bar/gc
+i 表示大小写不敏感， %s/foo/bar/i
+I 表示大小写敏感     %s/foo/bar/I
+c 表示需要确认       %s/foo/bar/gc
 ```
 
 ##### （高级查找替换用可用正则表达式）
@@ -248,7 +249,6 @@ vi -O filenames    在垂直分割的多个窗口中编辑多个文件。
 ```
 vim -p files         打开多个文件，每个文件占用一个标签页。
 :tabe   name         如果加文件名，就在新的标签中打开这个文件， 否则打开一个空缓冲区。
-:tabnew name         同上
 ^w gf                在新的标签页里打开光标下路径指定的文件。
 :tabn                切换到下一个标签。(Control + PageDown)
 :tabp                切换到上一个标签。(Control + PageUp)
@@ -274,8 +274,8 @@ ctrl+^                    在最近两个缓冲区间切换。
 
 ## 分屏编辑
 ```
-vim -o file1 file2:水平分割窗口，同时打开file1和file2
-vim -O file1 file2:垂直分割窗口，同时打开file1和file2
+vim -o file1 file2     水平分割窗口，同时打开file1和file2
+vim -O file1 file2     垂直分割窗口，同时打开file1和file2
 ```
 
 ##### 1.水平分割
@@ -317,11 +317,11 @@ ctrl+w |        当前窗口尽可能的宽。也可以用n设定列数。
 
 ##### 5.关闭子窗口
 ```
-ctrl+w o         关闭其他窗口
-:qall            关闭所有窗口，退出vim。
+:qall            关闭所有窗口
 :wall            保存所有修改过的窗口。
+:wqall           保存并关闭所有窗口
 :only            只保留当前窗口，关闭其它窗口。(CTRL-W o)
-:close           关闭当前窗口，CTRL-W c能实现同样的功能。 (象 :q :x同样工作 )
+:close           关闭当前窗口，CTRL-W c能实现同样的功能。 (:q或:x)
 ```
 
 
@@ -337,7 +337,7 @@ R      进入替换模式，按esc回到正常模式。
 U               取消当前行中所有的改动。
 [n] u:          取消一(n)个改动。
 :undolist       你的撤销历史。
-ctrl+r        重做撤销。
+ctrl+r          重做撤销。
 :earlier 4m     回到4分钟前
 :later 55s      前进55秒
 ```
@@ -448,6 +448,7 @@ n >>   光标以下的n行会缩进。
 <<     光标所在行会缩出。
 n <<   光标以下的n行会缩出。
 n =    调整n行代码的缩排。
+gg=G   重排全文（赞）
 
 在可视模式下，选择要调整的代码块，按=，代码会按书写规则缩排好。
 ```
@@ -483,7 +484,13 @@ C-r 2+2 =    (插入模式)光标处会插入计算结果
 
 ##### 3.实时加密文本
 ```
-ggVGg?
+ggVGg?     
+
+解析：
+      gg 把光标移动到 Vim 缓冲区的第一行，
+      V 进入可视模式，
+      G 把光标移动到缓冲区的最后一行。
+      g? 使用 ROT13 对整个区域进行编码。
 ```
 
 ##### 4.比较两个文件的不同
@@ -491,8 +498,8 @@ ggVGg?
 $ vimdiff [文件1] [文件2]  比较两个文件的不同(终端命令)
 
 vim命令:
-① vim -o file1 file2:水平分割窗口，同时打开file1和file2
-  vim -O file1 file2:垂直分割窗口，同时打开file1和file2
+① vim -o file1 file2    水平分割窗口，同时打开file1和file2
+  vim -O file1 file2    垂直分割窗口，同时打开file1和file2
 
 ② :windo diffthis
 
