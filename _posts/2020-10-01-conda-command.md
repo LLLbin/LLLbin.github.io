@@ -30,7 +30,8 @@ conda -h
 ```
 
 ##### 查看某一命令的帮助，如update命令及remove命令
-```conda update --help
+```
+conda update --help
 conda remove --help
 ```
 
