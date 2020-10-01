@@ -2,7 +2,7 @@
 layout:     post                    
 title:      conda        
 subtitle:   那些conda的常用命令👻
-date:       2020-06-28            
+date:       2020-10-01            
 author:     Lebin                     
 header-img: img/post-bg-conda.jpg
 catalog: true                       
