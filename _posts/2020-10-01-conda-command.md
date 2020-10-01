@@ -85,11 +85,11 @@ conda remove --name your_env_name --all
 
 ## 3.分享环境
 ```
-① activate target_env                      进入环境target_env     
+1. activate target_env                      进入环境target_env     
 
-② conda env export > environment.yml       当前工作目录下生成一个environment.yml文件     
+2. conda env export > environment.yml       当前工作目录下生成一个environment.yml文件     
 
-③ conda env create -f environment.yml      目的工作目录下，可以通过以下命令从该文件创建环境       
+3. conda env create -f environment.yml      目的工作目录下，可以通过以下命令从该文件创建环境       
 ```
 
 ## 4.包管理
