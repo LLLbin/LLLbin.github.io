@@ -1,7 +1,7 @@
 ---
 layout:     post                    
-title:      Python - conda        
-subtitle:   那些conda的常用命令👻
+title:      Python - conda - instruction
+subtitle:   那些conda的常用指令👻
 date:       2020-10-01            
 author:     Lebin                     
 header-img: img/post-bg-conda.jpg
