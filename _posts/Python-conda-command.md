@@ -1,6 +1,6 @@
 ---
 layout:     post                    
-title:      conda        
+title:      Python - conda        
 subtitle:   那些conda的常用命令👻
 date:       2020-10-01            
 author:     Lebin                     
