@@ -1,6 +1,6 @@
 ---
 layout:     post                    
-title:      Linux - Vim常用快捷键           
+title:      Linux - Vim - common - instruction          
 subtitle:   那些Vim上常用的快捷键🍗
 date:       2020-06-28            
 author:     Lebin                     

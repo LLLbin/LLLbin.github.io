@@ -1,6 +1,6 @@
 ---
 layout:     post                    
-title:      Linux - 常用指令           
+title:      Linux - common - instruction           
 subtitle:   那些Linux上常用的指令笔记🍖
 date:       2020-06-27              
 author:     Lebin                     

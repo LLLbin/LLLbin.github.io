@@ -1,6 +1,6 @@
 ---
 layout:     post                    
-title:      Linux - Vim配置           
+title:      Linux - Vim - configure           
 subtitle:   配置自己的Vim😎 
 date:       2020-06-26              
 author:     Lebin                     
