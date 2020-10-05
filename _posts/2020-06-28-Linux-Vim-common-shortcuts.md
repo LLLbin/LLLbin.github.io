@@ -9,7 +9,6 @@ catalog: true
 tags:                               
     - Linux
     - Vim
-    - note
 ---
 
 ## 启动Vim

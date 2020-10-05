@@ -9,7 +9,6 @@ catalog: true
 tags:                               
     - Linux
     - Vim
-    - note
 ---
 
 # Linux 配置自己的Vim

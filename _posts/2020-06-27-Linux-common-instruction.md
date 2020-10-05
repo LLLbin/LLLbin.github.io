@@ -8,7 +8,6 @@ header-img: img/post-bg-Vimrc.jpg
 catalog: true                       
 tags:                               
     - Linux
-    - note
 ---
 
 ## 目录操作

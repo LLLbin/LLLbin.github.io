@@ -6,7 +6,8 @@ date:       2020-10-01
 author:     Lebin                     
 header-img: img/post-bg-conda.jpg
 catalog: true                       
-tags:                               
+tags:             
+    - python                  
     - conda
 ---
 
