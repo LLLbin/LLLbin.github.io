@@ -12,7 +12,7 @@ tags:
 ---
 
 ## gcc 编译源代码过程
-![过程图](../img/post-Lib-gcc.jpg)
+![过程图](https://lllbin.github.io/img/post-Lib-gcc.jpg)
 
 ## gcc 命令及其相关参数
 ```
@@ -31,7 +31,7 @@ tags:
 ```
 
 ## 静态库和动态库概念
-![概念图](../img/post-Lib-a_so.jpg)
+![概念图](https://lllbin.github.io/img/post-Lib-a_so.jpg)
 
 ### 静态库
 ##### 静态库命名
