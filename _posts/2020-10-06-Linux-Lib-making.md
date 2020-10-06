@@ -82,8 +82,9 @@ libxxx.so（lixux） <->  .dll（windows）
 gcc main.c -o a.out -I include/ -L lib/ -lxxx
 
 动态加载问题解决:
-1. 拷贝libxxx.so到/lib下(不推荐)
+1. 拷贝libxxx.so到/lib或/usr/lib下(不推荐)
 2. 将库路径增加到环境变量LD_LIBRARY_PATH中(不是很推荐)
+(export LD_LIBRARY_PATH=libpath:$LD_LIBRARY_PATH)
 3. sudo vim /etc/ld.so.conf, 添加当前lib文件夹的绝对路径, 执行sudo ldconfig -v(常用)
 
 注:ldd a.out可以查看链接动态库情况
