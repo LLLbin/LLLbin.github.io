@@ -2,7 +2,7 @@
 layout:     post                    
 title:      Linux - makefile         
 subtitle:   编写makefile文件🌰
-date:       2020-02-06            
+date:       2021-02-06            
 author:     Lebin                     
 header-img: img/post-bg-Vimrc.jpg
 catalog: true                       
