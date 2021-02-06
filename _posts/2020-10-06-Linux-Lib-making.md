@@ -20,7 +20,7 @@ tags:
   -S            生成汇编代码
   -c            将汇编代码编译成二进制文件
   -L            包含库路径(相对路径、绝对路径都可)
-  -l            指定库名，（libxxx.so -> -lxxx）
+  -l            指定库名，（libxxx.a|so -> -lxxx）
   -I            包含头文件路径
   -o            生成指定的可执行文件名
   -O            优先级1-3
@@ -40,11 +40,11 @@ libxxx.a（lixux） <->  .lib（windows）
 ```
 ##### 静态库制作
 ```
-1. gcc -c *.c                ->  生成.o文件(可以用nm命令查看.o文件内容)
+1. gcc -c *.c           ->  生成.o文件(可以用nm命令查看.o文件内容)
 
-2. ar rsc libxxx.a *.o       ->  生成libxxx.a静态库
+2. ar rsc libxxx.a *.o  ->  生成libxxx.a静态库
 
-3. mv libxxx.a ../lib/       ->  发布库和头文件(移动头文件到include, 移动库文件到lib)
+3. mv libxxx.a ../lib/  ->  发布库和头文件(移动头文件到include, 移动库文件到lib)
 ```
 
 ##### 静态库使用
@@ -77,17 +77,21 @@ libxxx.so（lixux） <->  .dll（windows）
 3. mv libxxx.so ../lib/          ->  发布库和头文件(移动头文件到include, 移动库文件到lib)
 ```
 
-##### 动态库使用
+##### 动态加载问题解决:
 ```
-gcc main.c -o a.out -I include/ -L lib/ -lxxx
-
-动态加载问题解决:
 1. 拷贝libxxx.so到/lib或/usr/lib下(不推荐)
+
 2. 将库路径增加到环境变量LD_LIBRARY_PATH中(不是很推荐)
 (export LD_LIBRARY_PATH=libpath:$LD_LIBRARY_PATH)
+
 3. sudo vim /etc/ld.so.conf, 添加当前lib文件夹的绝对路径, 执行sudo ldconfig -v(常用)
 
 注:ldd a.out可以查看链接动态库情况
+```
+
+##### 动态库使用
+```
+gcc main.c -o a.out -I include/ -L lib/ -lxxx
 ```
 
 ##### 优缺点
