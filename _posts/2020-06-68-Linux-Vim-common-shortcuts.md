@@ -11,6 +11,8 @@ tags:
     - Vim
 ---
 
+### Vimplus快捷键传送门：[点我点我点我](https://github.com/chxuan/vimplus/blob/master/help.md)
+
 ## 启动Vim
 ```
 vim + file            从文件的末尾开始
